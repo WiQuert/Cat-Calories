@@ -16,36 +16,46 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-Thread {
-    val source = ImageDecoder.createSource(resources, R.drawable.catsplash)
-    val drawable = ImageDecoder.decodeDrawable(source)
-    binding.imSplash.setImageDrawable(drawable)
-    if (drawable is AnimatedImageDrawable) {
-        drawable.start()
-    }
 
-}
-
-        timer = object : CountDownTimer(2000, 1000) {
-
-            override fun onTick(p0: Long) {
-
-            }
-            override fun onFinish() {
-                val intent = Intent(this@SplashActivity, MainActivity::class.java)
-                startActivity(intent)
+        Thread {
+            val source = ImageDecoder.createSource(resources, R.drawable.catsplash)
+            val drawable = ImageDecoder.decodeDrawable(source)
+            binding.imSplash.post {
+                binding.imSplash.setImageDrawable(drawable)
+                if (drawable is AnimatedImageDrawable) {
+                    drawable.start()
+                }
             }
 
-        }
-            .start()
+        }.start()
+
+
+
+                timer = object : CountDownTimer(2000, 1000) {
+
+                    override fun onTick(p0: Long) {
+
+                    }
+
+                    override fun onFinish() {
+                        val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                }
+                    .start()
+            }
+
+
+            override fun onDestroy() {
+                super.onDestroy()
+                timer.cancel()
+            }
+
     }
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        timer.cancel()
-    }
-}
+
 
 
 
