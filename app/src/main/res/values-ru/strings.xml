@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Кошачьи калории</string>
+    <string name="menu_calc">Расчет</string>
+    <string name="fragment_calc_header">Калькулятор суточной нормы калорий для кошек</string>
+    <string name="fragment_calc_why_btn">Зачем это нужно?</string>
+    <string name="menu_info">Информация</string>
+    <string name="menu_about">О приложении</string>
+    <string name="fragment_calc_formula_intro">Формула расчета:</string>
 </resources>

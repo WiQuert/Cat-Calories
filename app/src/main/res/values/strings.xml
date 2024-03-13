@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Cat Calories</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_calc">Calculation</string>
+    <string name="menu_info">Information</string>
+    <string name="menu_about">About app</string>
+    <string name="fragment_calc_header">Cats daily calories calculator</string>
+    <string name="fragment_calc_why_btn">Why is that necessary?</string>
+    <string name="fragment_calc_formula_intro">Calculation formula:</string>
 </resources>
