@@ -2,9 +2,8 @@ package com.wiquert.catcalories
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.viewbinding.ViewBinding
 import com.wiquert.catcalories.databinding.ActivityMainBinding
+import com.wiquert.catcalories.fragments.CalcFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -12,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragHolder, CalcFragment.newInstance())
+            .commit()
 
     }
 }
