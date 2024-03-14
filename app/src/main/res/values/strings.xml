@@ -4,6 +4,10 @@
     <string name="menu_info">Information</string>
     <string name="menu_about">About app</string>
     <string name="fragment_calc_header">Cats daily calories calculator</string>
-    <string name="fragment_calc_why_btn">Why is that necessary?</string>
-    <string name="fragment_calc_formula_intro">Calculation formula:</string>
+    <string name="fragment_calc_cat_weight">Cat weight (in kg):</string>
+    <string name="fragment_calc_cat_weight_edittext">Enter the value</string>
+    <string name="fragment_calc_coefficient">Select the appropriate coefficient (K):</string>
+    <string name="fragment_calc_formula_intro">Calculate by the formula:</string>
+    <string name="fragment_calc_formula">K × (30 × body weight + 70)</string>
+    <string name="fragment_calc_result_btn">Result</string>
 </resources>

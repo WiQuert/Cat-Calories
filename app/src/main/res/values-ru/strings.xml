@@ -2,8 +2,12 @@
     <string name="app_name">Кошачьи калории</string>
     <string name="menu_calc">Расчет</string>
     <string name="fragment_calc_header">Калькулятор суточной нормы калорий для кошек</string>
-    <string name="fragment_calc_why_btn">Зачем это нужно?</string>
+    <string name="fragment_calc_result_btn">Результат</string>
     <string name="menu_info">Информация</string>
     <string name="menu_about">О приложении</string>
-    <string name="fragment_calc_formula_intro">Формула расчета:</string>
+    <string name="fragment_calc_formula_intro">Рассчитываем по формуле:</string>
+    <string name="fragment_calc_cat_weight">Вес кошки (в кг):</string>
+    <string name="fragment_calc_cat_weight_edittext">Введите значение</string>
+    <string name="fragment_calc_coefficient">Выберите соответствующий коэффициент (К):</string>
+    <string name="fragment_calc_formula">K × (30 × масса тела + 70)</string>
 </resources>
