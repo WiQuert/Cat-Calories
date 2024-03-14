@@ -1,13 +1,26 @@
 <resources>
     <string name="app_name">Кошачьи калории</string>
     <string name="menu_calc">Расчет</string>
-    <string name="fragment_calc_header">Калькулятор суточной нормы калорий для кошек</string>
-    <string name="fragment_calc_result_btn">Результат</string>
     <string name="menu_info">Информация</string>
     <string name="menu_about">О приложении</string>
+
+<!--    Фрагмент с расчетами калорий-->
+    <string name="fragment_calc_header">Калькулятор суточной нормы калорий для кошек</string>
+    <string name="fragment_calc_result_btn">Результат</string>
     <string name="fragment_calc_formula_intro">Рассчитываем по формуле:</string>
     <string name="fragment_calc_cat_weight">Вес кошки (в кг):</string>
     <string name="fragment_calc_cat_weight_edittext">Введите значение</string>
     <string name="fragment_calc_coefficient">Выберите соответствующий коэффициент (К):</string>
     <string name="fragment_calc_formula">K × (30 × масса тела + 70)</string>
+
+<!--    Передача данных в выпадающий список c коэффициентами-->
+    <string name="fragment_calc_vzr_kastr">Взрослый кастрированный (1.2)</string>
+    <string name="fragment_calc_vzr">Взрослый (1.4)</string>
+    <string name="fragment_calc_akt_vzr">Активный взрослый (1.6)</string>
+    <string name="fragment_calc_pereedanie">Переедание (1.0)</string>
+    <string name="fragment_calc_snizhenie">Снижение веса (0.8)</string>
+    <string name="fragment_calc_bolezn">Уход при болезни (1.0)</string>
+    <string name="fragment_calc_nabor">Набор веса (1.2)</string>
+    <string name="fragment_calc_berem">Беременность (1.7)</string>
+    <string name="fragment_calc_rost">Рост (1.3)</string>
 </resources>

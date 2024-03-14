@@ -10,4 +10,13 @@
     <string name="fragment_calc_formula_intro">Calculate by the formula:</string>
     <string name="fragment_calc_formula">K × (30 × body weight + 70)</string>
     <string name="fragment_calc_result_btn">Result</string>
+    <string name="fragment_calc_vzr">Adult (1.4)</string>
+    <string name="fragment_calc_akt_vzr">Active adult (1.6)</string>
+    <string name="fragment_calc_snizhenie">Weight loss (0.8)</string>
+    <string name="fragment_calc_pereedanie">Overeating (1.0)</string>
+    <string name="fragment_calc_vzr_kastr">Adult neutered (1.2)</string>
+    <string name="fragment_calc_bolezn">Sickness care (1.0)</string>
+    <string name="fragment_calc_nabor">Weight gain (1.2)</string>
+    <string name="fragment_calc_berem">Pregnancy (1.7)</string>
+    <string name="fragment_calc_rost">Growth (1.3)</string>
 </resources>
