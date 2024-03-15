@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.wiquert.catcalories.R
@@ -17,6 +18,8 @@ class CalcFragment : Fragment() {
     private lateinit var coefSpinner : Spinner
     private lateinit var spinnerAdapter: ArrayAdapter<CalcCoefficientData>
     private lateinit var binding: FragmentCalcBinding
+    var coefResult : Double = 0.0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,7 +35,24 @@ class CalcFragment : Fragment() {
         spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, coefObjects)
         coefSpinner.adapter = spinnerAdapter
 
+    coefSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
+        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+            val selectedCoef = coefSpinner.selectedItem as CalcCoefficientData
+            coefResult = selectedCoef.coefficient
+        }
+
+        override fun onNothingSelected(p0: AdapterView<*>?) { }
+    }
+
+        binding.bResult.setOnClickListener {
+            if (!isFieldEmpty()) {
+                getResult()
+                binding.tvResult.visibility = View.VISIBLE
+                val tvResultInfo = getString(R.string.fragment_calc_result_info) + getResult() + getString(R.string.fragment_calc_result_kcal)
+                binding.tvResult.text = tvResultInfo
+            }
+        }
     }
 
     private fun getCoefficientObjects() : ArrayList<CalcCoefficientData> {
@@ -48,6 +68,22 @@ class CalcFragment : Fragment() {
             add(CalcCoefficientData(1.3, getString(R.string.fragment_calc_rost)))
         }
         return coefficientObjects
+    }
+
+
+
+
+    fun isFieldEmpty() : Boolean {
+        binding.apply {
+            if (edtextKilos.text.isNullOrEmpty()) edtextKilos.error = getString(R.string.fragment_calc_error)
+            return edtextKilos.text.isNullOrEmpty()
+        }
+    }
+
+
+    private fun getResult(): String {
+        val catWeight = binding.edtextKilos.text.toString().toDouble()
+        return (coefResult * (30 * catWeight + 70)).toString()
     }
 
     companion object {
