@@ -4,6 +4,7 @@
     <string name="menu_info">Информация</string>
     <string name="menu_about">О приложении</string>
 
+
 <!--    Фрагмент с расчетами калорий-->
     <string name="fragment_calc_header">Калькулятор суточной нормы калорий для кошек</string>
     <string name="fragment_calc_result_btn">Результат</string>
@@ -12,6 +13,11 @@
     <string name="fragment_calc_cat_weight_edittext">Введите значение</string>
     <string name="fragment_calc_coefficient">Выберите соответствующий коэффициент (К):</string>
     <string name="fragment_calc_formula">K × (30 × масса тела + 70)</string>
+    <string name="fragment_calc_error">Поле должно быть заполнено!</string>
+    <string name="fragment_calc_result_info">"Результат: "</string>
+    <string name="fragment_calc_result_kcal">" ккал/день"</string>
+
+
 
 <!--    Передача данных в выпадающий список c коэффициентами-->
     <string name="fragment_calc_vzr_kastr">Взрослый кастрированный (1.2)</string>
