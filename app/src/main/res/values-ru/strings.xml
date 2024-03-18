@@ -39,10 +39,24 @@
 2. Смена рациона: переводить на другой корм нужно постепенно, подмешивая небольшое его количество в старую еду;\n
 3. Возраст: котятам, кормящим и беременным кошкам нужно в 2 раза больше калорий, а пожилым питомцам — меньше;\n
 4. Подвижность животного: гуляющая кошка ест больше, чем неактивный домашний кот;\n
-5. Пол и порода кошки (есть виды кошек, склонных к полноте).
-    </string>
+5. Пол и порода кошки (есть виды кошек, склонных к полноте).</string>
     <string name="fragment_info_4_formulaintro">Для кошек и собак с массой более 2 кг величина базовой и метаболической энергии определяется по следующим формулам:</string>
     <string name="fragment_info_4_formulabaz">Базовая энергия (ккал/день) = 30 × массу тела (m) + 70</string>
     <string name="fragment_info_4_formulamet">Метаболическая энергия (ккал/день) = K × (30 х массу тела + 70)</string>
-    <string name="fragment_info_4_koef">K ‒ коэффициент по табличке 2.</string>
+    <string name="fragment_info_4_koef">K ‒ коэффициент по табличке снизу.</string>
+    <string name="fragment_info_5">Отвечая на вопрос \"Зачем кота мучить диетами\", напомним вам, что ожирение, к которому может привести бесконтрольное поедание кошачьего корма животными, здоровья не прибавит. Так что все зависит только от вас!</string>
+
+
+    <!--    Таблица в информационном фрагменте-->
+    <string name="fragment_info_table_left">Стадия жизни кошки</string>
+    <string name="fragment_info_table_right">Множитель</string>
+    <string name="fragment_info_table_kastr">Взрослый кастрированный</string>
+    <string name="fragment_info_table_vzr">Взрослый</string>
+    <string name="fragment_info_table_akt_vzr">Активный взрослый</string>
+    <string name="fragment_info_table_pereedanie">Переедание</string>
+    <string name="fragment_info_table_snizhenie">Снижение веса</string>
+    <string name="fragment_info_table_bolezn">Уход при болезни</string>
+    <string name="fragment_info_table_nabor">Набор веса</string>
+    <string name="fragment_info_table_berem">Беременность</string>
+    <string name="fragment_info_table_rost">Рост</string>
 </resources>
