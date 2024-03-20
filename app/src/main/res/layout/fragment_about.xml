@@ -4,34 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".fragments.AboutFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_color">
+        android:layout_margin="15dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="15dp"
-            app:cardCornerRadius="7dp"
-            app:cardElevation="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="120dp"
                     android:layout_marginEnd="16dp"
                     app:cardBackgroundColor="@color/cardview_color"
                     app:cardCornerRadius="7dp"
@@ -52,6 +48,7 @@
                             android:id="@+id/tvAppName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:text="AppName"
                             android:textColor="@color/bottom_menu"
                             android:textSize="38sp"
@@ -62,6 +59,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="45dp"
+                            android:gravity="center"
                             android:text="Author"
                             android:textSize="24sp" />
                     </LinearLayout>
@@ -87,13 +85,13 @@
                     android:text="VersionApp"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imAnimation" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </FrameLayout>

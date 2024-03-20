@@ -7,30 +7,28 @@
     android:background="@color/background_color"
     tools:context=".fragments.CalcFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="15dp"
-            app:cardCornerRadius="7dp"
-            app:cardElevation="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="serif"
                     android:foregroundGravity="center"
                     android:gravity="center"
@@ -44,9 +42,9 @@
 
                 <View
                     android:id="@+id/divider"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="5dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="32dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -54,10 +52,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     app:cardBackgroundColor="@color/cardview_color"
                     app:cardCornerRadius="7dp"
@@ -84,7 +82,7 @@
                         <EditText
                             android:id="@+id/edtextKilos"
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             android:layout_marginTop="16dp"
                             android:autofillHints="decimal number"
                             android:ems="10"
@@ -105,7 +103,7 @@
                         <Spinner
                             android:id="@+id/coefSpinner"
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             android:layout_marginTop="16dp"
                             android:gravity="center" />
 
@@ -115,9 +113,9 @@
 
                 <View
                     android:id="@+id/divider2"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="5dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="32dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -125,14 +123,16 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView2"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
                     app:cardBackgroundColor="@color/cardview_color"
                     app:cardCornerRadius="7dp"
                     app:cardElevation="5dp"
-                    app:layout_constraintEnd_toEndOf="@+id/cardView"
-                    app:layout_constraintStart_toStartOf="@+id/cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/divider2">
 
                     <LinearLayout
@@ -164,34 +164,41 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/bResult"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:backgroundTint="@color/bottom_menu"
-                    android:text="@string/fragment_calc_result_btn"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
-                    app:layout_constraintStart_toStartOf="@+id/cardView2" />
-
                 <TextView
                     android:id="@+id/tvResult"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="52dp"
                     android:fontFamily="serif"
+                    android:gravity="center"
                     android:text="TextView"
                     android:textSize="20sp"
                     android:textStyle="bold|italic"
                     android:visibility="invisible"
-                    app:layout_constraintBottom_toTopOf="@+id/bResult"
-                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
-                    app:layout_constraintStart_toStartOf="@+id/cardView2"
+                    app:layout_constraintBottom_toTopOf="@id/bResult"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
-
+                <Button
+                    android:id="@+id/bResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/bottom_menu"
+                    android:text="@string/fragment_calc_result_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </FrameLayout>
