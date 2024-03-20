@@ -3,6 +3,8 @@
     <string name="menu_calc">Расчет</string>
     <string name="menu_info">Информация</string>
     <string name="menu_about">О приложении</string>
+    <string name="version_app">"Версия приложения: "</string>
+    <string name="developed"><b>Разработано WiQuert</b></string>
 
 
 <!--    Фрагмент с расчетами калорий-->
