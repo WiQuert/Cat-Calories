@@ -7,16 +7,16 @@
     android:background="@color/background_color"
     tools:context=".fragments.CalcFragment">
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="5dp">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -169,9 +169,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="32dp"
+                    android:layout_marginBottom="16dp"
                     android:fontFamily="serif"
                     android:gravity="center"
                     android:text="TextView"
@@ -190,15 +190,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="32dp"
                     android:backgroundTint="@color/bottom_menu"
                     android:text="@string/fragment_calc_result_btn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
 
 </FrameLayout>
